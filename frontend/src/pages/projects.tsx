@@ -33,7 +33,7 @@ const Projects = (props: Props) => {
 	
 	return (
 		<Layout metadata={props.metaData}>
-			<div className={`container center${loading ? ' fh' : null }`}>
+			<div className={`container center${loading || error ? ' fh' : null }`}>
 				{(() => {
 					if(loading) return <FiLoader className='loading-icon' />;
 					if(error) return <>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Link from 'next/link';
-import { FiGithub, FiLinkedin, FiLoader, FiMail } from 'react-icons/fi';
+import { FiAlertCircle, FiGithub, FiLinkedin, FiLoader, FiMail } from 'react-icons/fi';
 import { gql, useQuery } from '@apollo/client';
 
 import { Hero, Layout } from '../components';
@@ -40,7 +40,13 @@ const Index = (props: Props) => {
 			<div className='container center fh'>
 				{(() => {
 					if(loading) return <FiLoader className='loading-icon' />;
-					if(error) return <p>error...</p>;
+					if(error) return <>
+						<FiAlertCircle className='loading-icon' />
+						<p>
+								error loading...
+						</p>
+					</>;
+					
 					return (
 						<>
 							<Hero image={data?.indexPage?.hero.image}
