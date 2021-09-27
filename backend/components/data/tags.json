@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_project_card_tags",
+  "info": {
+    "name": "Tag",
+    "icon": "tag",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "color": {
+      "type": "string"
+    }
+  }
+}
